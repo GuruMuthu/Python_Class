@@ -1,0 +1,115 @@
+#(Q-No : 1 ) Join items of a given list using "-" and print the string :-
+
+weekdays = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+
+def str_joining(Parameter):
+    
+    answer = "-".join(Parameter)
+    return answer
+    
+result = str_joining(weekdays)
+print(result)
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+#(Q-No : 2 ) Count the occurrences of a particular element in the list and output highest occuring element :-
+
+days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sun', 'mon', 'mon']
+
+def Max_occuring_str(Paramater):
+    dic = {}
+    no_of_time = 0
+    day = None
+    for i in days:
+        if i in dic:
+            dic[i] += 1
+        else:
+            dic[i] =1
+        
+        if dic[i] > no_of_time:
+            no_of_time = dic[i]
+            day = i
+    return day
+
+result = Max_occuring_str(days)
+
+print(result)
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+#(Q-No :3) Merging two dictionaries (a and b).The result dict must contain all item of both dict ,
+# if the key is common then the value of key in resultant dict must be sum of value in a and b :
+ 
+a = {'x': 1, 'y': 2, 'z': 3}
+b = {'a': 4, 'b': 5, 'y': 6}
+
+def dictMerge(a, b):
+    result = {}
+
+    # Using Dict a :
+    for key, value in a.items():
+        result[key] = result.get(key, 0) + value
+    
+    # Using Dict B :
+    for key, value in b.items():
+        result[key] = result.get(key, 0) + value
+       
+    
+    return result
+
+result_dict = dictMerge(a, b)
+print(result_dict)
+
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+#(Q-No :4) Return the item with highest value count:-
+
+items = [{'Delhi': 3}, {'Mumbai': 9}, {'Goa': 7}, {'Gujrat': 4}]
+
+def item_with_high_value(Parameter):
+    max_value = 0
+    max_item = None
+
+    for i in items:
+        for key, value in i.items():
+            if value > max_value:
+                max_value = value
+                max_item = key
+    
+    return max_item
+
+result = item_with_high_value(items)
+print(result)
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+#(Q-No :5) Group by the owner :-
+
+def group_by_owners(Parameter):
+    owners_dict = {}
+    
+    for file, owner in files.items():
+        if owner in owners_dict:
+            owners_dict[owner].append(file)
+        else:
+            owners_dict[owner] = [file]
+    
+    return owners_dict
+
+files = {
+    'Input.txt': 'Randy',
+    'Code.py': 'Stan',
+    'Output.txt': 'Randy'
+}
+result = group_by_owners(files)
+print(result)
+

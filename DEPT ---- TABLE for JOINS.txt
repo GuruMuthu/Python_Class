@@ -1,0 +1,10 @@
+create table DEPT(
+DNO INT NOT NULL UNIQUE,
+DNAME varchar(20),
+LOC varchar(20),
+primary key(DNO)
+);
+select*from dept;
+insert into dept(DEPTNO,DNAME,LOC)VALUE (10,"D1","L1");
+insert into dept(DEPTNO,DNAME,LOC)VALUE (20,"D2","L2");
+insert into dept(DEPTNO,DNAME,LOC)VALUE (30,"D3","L3");
